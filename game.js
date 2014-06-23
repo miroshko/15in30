@@ -22,9 +22,7 @@ function shuffle() {
   }
 }
 function check() {
-  return 15 == tds.slice(0,15).reduce(function(prev, curr, ind, arr) {
-    return parseInt(curr.innerHTML) == ind + 1 ? prev + 1 : 0;
-  }, 0);
+  return /1\s2\s3\s4\s{1,2}5\s6\s7\s8\s{1,2}9\s10\s11\s12\s{1,2}13\s14\s15\s{1,2}/.test(table.innerText);
 }
 document.children[0].appendChild(table);
 shuffle();
