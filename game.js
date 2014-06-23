@@ -17,7 +17,7 @@ function onCellClick(e) {
   }
 }
 function shuffle() {
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 1000; i++) {
     onCellClick(tds[Math.floor(Math.random() * 16)]);
   }
 }
