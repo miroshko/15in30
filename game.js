@@ -1,4 +1,4 @@
-var table = document.createElement("table"), tr, td, i, free, tds = [];
+var table = document.createElement("table"), tr, td, i, free, won, tds = [];
 for(i = 0; i <= 15; i++) {
   i % 4 == 0 && table.appendChild(tr = document.createElement("tr"));
   tr.appendChild(td = free = document.createElement("td"));
@@ -13,11 +13,12 @@ function onCellClick(e) {
     free.innerHTML = td.innerHTML;
     td.innerHTML = "";
     free = td;
+    won
     e.target && check() && alert('Voila!') && shuffle();
   }
 }
 function shuffle() {
-  for (var i = 0; i < 1000; i++) {
+  for (var i = 0; i < 10000; i++) {
     onCellClick(tds[Math.floor(Math.random() * 16)]);
   }
 }
