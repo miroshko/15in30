@@ -14,16 +14,17 @@ function onCellClick(e) {
     free.innerHTML = td.innerHTML;
     td.innerHTML = "";
     free = td;
-    if (e.target && check())
-      alert('Voila!') && shuffle();
+    if (e.target && check()) {
+      alert('Voila!');
+      shuffle();
+    }
   }
-}
-function shuffle() {
-  for (var i = 0; i < 10000; i++)
-    onCellClick(tds[Math.floor(Math.random() * 16)]);
 }
 function check() {
   return /1\s2\s3\s4\s{1,2}5\s6\s7\s8\s{1,2}9\s10\s11\s12\s{1,2}13\s14\s15\s{1,2}/.test(table.innerText);
 }
 document.children[0].appendChild(table);
-shuffle();
+(function shuffle() {
+  for (var i = 0; i < 10000; i++)
+    onCellClick(tds[Math.floor(Math.random() * 16)]);
+})();
