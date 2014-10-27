@@ -1,0 +1,20 @@
+td {
+  width: 30px;
+  height: 30px;
+  cursor: default;
+  text-align: center;
+  box-shadow: 0px 0px 4px -3px #000;
+}
+
+td, td:hover:empty {
+  background: #eef;
+}
+
+td:hover {
+  background: #dde;
+}
+
+
+
+td:not(:empty) {
+}
